@@ -1,0 +1,245 @@
+/* MERCH GRID */
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--dark-grey);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    border-color: var(--neon);
+    transform: translateY(-10px);
+}
+
+.product-image {
+    background: #111;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.img-placeholder {
+    font-size: 4rem;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--neon);
+    color: var(--dark);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-family: 'Orbitron';
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: var(--neon);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.buy-btn {
+    display: block;
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid var(--neon);
+    color: var(--neon);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: var(--neon);
+    color: var(--dark);
+}
+/* QUICK LINKS GRID */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.link-card {
+    background: var(--dark-grey);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.link-icon {
+    font-size: 2rem;
+    background: #000;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.link-text h3 {
+    font-family: 'Orbitron';
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.link-text p {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* BRAND SPECIFIC HOVERS */
+.yt-hover:hover {
+    border-color: #FF0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    transform: scale(1.03);
+}
+
+.ig-hover:hover {
+    border-color: #E1306C;
+    box-shadow: 0 0 20px rgba(225, 48, 108, 0.2);
+    transform: scale(1.03);
+}
+
+.tt-hover:hover {
+    border-color: #00f2ea;
+    box-shadow: 0 0 20px rgba(0, 242, 234, 0.2);
+    transform: scale(1.03);
+}
+:root {
+    --neon: #b5ff8c;
+    --dark: #0a0a0a;
+    --dark-grey: #1a1a1a;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND ANIMATION EFFECT */
+.bg-lines {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(181, 255, 140, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(181, 255, 140, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0; z-index: 1000;
+}
+
+.logo { font-family: 'Orbitron'; font-weight: bold; font-size: 1.5rem; }
+.logo span { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: white; font-size: 0.9rem; transition: 0.3s; }
+.nav-links a:hover { color: var(--neon); }
+
+/* HERO SECTION */
+.hero { height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.main-logo { width: 150px; border-radius: 50%; border: 3px solid var(--neon); box-shadow: 0 0 20px var(--neon); margin-bottom: 20px; }
+h1 { font-family: 'Orbitron'; font-size: 3.5rem; margin-bottom: 10px; }
+.glitch-text { color: var(--neon); }
+
+/* SECTIONS */
+.container { padding: 100px 10%; max-width: 1200px; margin: 0 auto; }
+.section-title { font-family: 'Orbitron'; text-align: center; margin-bottom: 50px; color: var(--neon); }
+
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* GRID SYSTEM */
+.links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.link-card {
+    background: var(--dark-grey);
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: 0.3s;
+    font-weight: 600;
+}
+.link-card:hover { border-color: var(--neon); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(181, 255, 140, 0.1); }
+
+/* BUTTONS */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--neon);
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.cta-button:hover { box-shadow: 0 0 20px var(--neon); transform: scale(1.05); }
+
+/* CONTACT FORM */
+.contact-box { background: var(--dark-grey); padding: 50px; border-radius: 15px; border: 1px solid #333; max-width: 600px; margin: 0 auto; }
+form input, form textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: #0a0a0a; border: 1px solid #333; color: white; border-radius: 5px; }
+
+footer { text-align: center; padding: 50px; background: #050505; color: #444; border-top: 1px solid #111; }
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    .nav-links { display: none; } /* Simplified for now */
+}
